@@ -1,0 +1,47 @@
+I am working in the REACH Databricks environment and want to identify serum creatinine values for patients with **AKI superimposed on pre-existing CKD** during the **last 6 months**.
+
+Please help me do the following:
+
+1. Identify the relevant REACH tables and columns for:
+   - Patient identifier
+   - Encounter/admission identifier
+   - Admission and discharge dates
+   - AKI diagnosis
+   - Pre-existing CKD diagnosis and, if available, CKD stage
+   - Serum creatinine laboratory results
+   - Creatinine specimen/result date and time
+   - Creatinine units
+   - Inpatient versus outpatient encounter/location
+
+2. Do **not guess table or column names**. First inspect the available schema/catalog and tell me which tables and fields are appropriate.
+
+3. Define the cohort as patients who:
+   - Had an AKI encounter during the last 6 months, and
+   - Had evidence of CKD that existed before or at the time of that AKI encounter.
+
+4. For each qualifying patient, retrieve **all available serum creatinine measurements** associated with the AKI episode, including:
+   - Patient ID
+   - Encounter ID
+   - AKI admission date
+   - AKI discharge date
+   - CKD diagnosis/stage if available
+   - Creatinine value
+   - Creatinine result/specimen timestamp
+   - Creatinine units
+   - Encounter type/location
+
+5. Exclude duplicate laboratory records and clearly identify how duplicates are handled.
+
+6. Restrict creatinine results to valid serum/plasma creatinine measurements and exclude urine creatinine or other similarly named laboratory tests.
+
+7. Please generate the final query in **Databricks SQL/Spark SQL** so I can run it directly in a Jupyter notebook.
+
+8. Before producing the final query, show me:
+   - The tables you selected
+   - The join keys
+   - How AKI is identified
+   - How pre-existing CKD is identified
+   - How serum creatinine is identified
+   - Any assumptions or limitations
+
+If AKI and CKD can be identified in more than one way—for example diagnosis codes versus laboratory-based criteria—show me the available options before choosing the final approach.
