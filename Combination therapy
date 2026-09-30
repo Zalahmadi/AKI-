@@ -1,0 +1,26 @@
+Using the project cohort definition, identify **CKD patients who were taking both a RAAS inhibitor (RAASi) and an SGLT2 inhibitor during the 90 days before an AKI hospitalization**. The project specifically compares patients restarted on both drugs at discharge versus neither and examines 30-day readmission and creatinine recovery within 90 days.
+
+Please:
+
+- Identify CKD patients with an AKI admission who had **RAASi + SGLT2i exposure within 90 days before AKI**.
+- Include single-agent and **combination products** using generic/active ingredient fields.
+- Determine discharge medication status:
+  - **Both resumed/continued**
+  - **Neither resumed**
+  - One resumed only, if present, as a separate descriptive group.
+- Compare **30-day hospital readmission** between the discharge groups.
+- Retrieve the **systolic BP closest to discharge**.
+- Retrieve the **serum potassium closest to discharge**.
+- Retrieve:
+  - Baseline/pre-AKI creatinine if available
+  - **Peak creatinine during the AKI encounter**
+  - Creatinine closest to discharge
+  - All outpatient creatinine values within **90 days after discharge**
+- For the 90-day creatinine follow-up, include result date/time and days from discharge so the creatinine trajectory can be analyzed.
+- Include patient ID, encounter ID, admission/discharge dates, CKD stage, medication names/status, SBP, potassium, creatinine values, and 30-day readmission status.
+- Exclude duplicate labs/vitals and urine creatinine.
+- Show the tables, join keys, and definitions used for **CKD, AKI, pre-AKI medication exposure, discharge restart, readmission, discharge SBP/potassium, and creatinine measurements**.
+- **Do not guess table or column names.**
+- Generate the final **Databricks SQL/Spark SQL query** and a summary comparing the restart groups.
+
+The primary comparison should be **both RAASi + SGLT2i restarted at discharge versus neither restarted**, consistent with the project design.
