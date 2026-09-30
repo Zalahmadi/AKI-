@@ -1,0 +1,16 @@
+Identify all **hospital admissions during the last 48 months** for patients with **pre-existing CKD stage 3a, 3b, 4, or 5 who were not on chronic dialysis before admission**, were **alive at discharge**, and developed **AKI by KDIGO criteria**.
+
+Define AKI as any of:
+- Serum creatinine increase **≥0.3 mg/dL within 48 hours**
+- Serum creatinine increase to **≥1.5× baseline within 7 days**
+- Urine output **<0.5 mL/kg/hour for ≥6 hours**, if reliable urine-output data are available
+
+Please:
+- Use actual longitudinal creatinine values to identify KDIGO AKI rather than diagnosis codes alone.
+- Identify baseline creatinine and the creatinine value/time that first met KDIGO criteria.
+- Include **KDIGO AKI stage 1, 2, or 3**.
+- Exclude patients on **chronic maintenance dialysis before admission**; acute dialysis during the AKI hospitalization should be identified separately, not automatically excluded.
+- Include patient ID, encounter ID, CKD stage, admission/discharge dates, baseline creatinine, AKI onset creatinine, peak creatinine, KDIGO stage, acute dialysis status, and discharge survival status.
+- Return **one row per qualifying AKI admission**.
+- **Do not guess table/column names.**
+- Generate the final **Databricks SQL/Spark SQL query**.
