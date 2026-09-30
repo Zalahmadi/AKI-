@@ -1,0 +1,22 @@
+Using the same CKD/AKI framework, identify **patients with CKD who had an AKI hospitalization during the last 24 months** and were taking a **RAASi-containing combination antihypertensive product within 90 days before that AKI encounter**.
+
+RAASi combination therapy includes a **single medication product containing an ACE inhibitor or ARB plus another antihypertensive agent**, such as:
+- ARB + thiazide/thiazide-like diuretic
+- ACEi + thiazide
+- ARB + calcium-channel blocker
+- ACEi + calcium-channel blocker
+- Other fixed-dose combinations containing an ACEi or ARB
+
+Please:
+- Restrict AKI encounters to the **last 24 months**.
+- Use **generic/active ingredient fields** to identify combination products.
+- Determine whether the **RAASi component was continued/resumed at AKI discharge** versus **not resumed**.
+- Compare **30-day hospital readmission** between groups.
+- Retrieve **systolic BP closest to discharge**.
+- Retrieve **serum potassium closest to discharge**.
+- Retrieve **peak serum creatinine during the AKI encounter**, creatinine closest to discharge, and all outpatient serum creatinine values within **90 days after discharge**.
+- Include patient ID, encounter ID, CKD stage, admission/discharge dates, combination medication and ingredients, discharge RAASi status, discharge SBP, discharge potassium, peak creatinine, discharge creatinine, 90-day creatinine values, and 30-day readmission status.
+- Exclude duplicate labs/vitals and urine creatinine.
+- Show the tables, join keys, and definitions used for **CKD, AKI, 90-day pre-AKI medication exposure, RAASi combination therapy, discharge restart, readmission, SBP, potassium, and creatinine**.
+- **Do not guess table or column names.**
+- Generate the final **Databricks SQL/Spark SQL query** and a summary comparing **RAASi resumed/continued vs not resumed**.
